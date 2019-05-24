@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   <definition name="boardBaseLayout"  template="/WEB-INF/views/board/common/layout.jsp">
+      <put-attribute name="title" value="" />
+      <put-attribute name="header" value="/WEB-INF/views/board/common/header.jsp" />
+      <put-attribute name="side" value="/WEB-INF/views/board/common/side.jsp" />
+      <put-attribute name="body" value="" />
+      <put-attribute name="footer" value="/WEB-INF/views/board/common/footer.jsp" />
+   </definition>
+   
+   <definition name="/board/listArticles" extends="boardBaseLayout">
+      <put-attribute name="title" value="게시글 리스트" />
+      <put-attribute name="body" value="/WEB-INF/views/board/board/listArticles.jsp" />
+   </definition>
+
+<definition name="/board/articleForm" extends="boardBaseLayout">
+      <put-attribute name="title" value="게시글 입력폼" />
+      <put-attribute name="body" value="/WEB-INF/views/board/board/articleForm.jsp" />
+   </definition>
+   
+ <definition name="/board/viewArticle" extends="boardBaseLayout">
+      <put-attribute name="title" value="글 상세 창" />
+      <put-attribute name="body" value="/WEB-INF/views/board/board/viewArticle.jsp" />
+   </definition>
+   
+   
+ <definition name="/board/replyForm" extends="baseLayout">
+      <put-attribute name="title" value="답변 창" />
+      <put-attribute name="body" value="/WEB-INF/views/board/replyForm.jsp" />
+   </definition>
+   
+</tiles-definitions>
